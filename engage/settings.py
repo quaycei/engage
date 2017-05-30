@@ -132,3 +132,18 @@ LOGIN_REDIRECT_URL = 'tools'
 
 DATABASES =  {'default' : dj_database_url.config(
                default='postgres://snplkgpbswvjht:4c383d0e7ec794e6257534bf0e20584b31446bddb26e4ad0137ef2a87e1d8443@ec2-174-129-224-33.compute-1.amazonaws.com:5432/d2cu5a4q79lcaq')}
+
+
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_URL = '/static/'
+
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+)
+
+
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
