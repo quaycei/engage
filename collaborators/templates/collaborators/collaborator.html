@@ -1,0 +1,16 @@
+{% extends 'onboard/base.html' %}
+
+{% block content %}
+
+<br />
+<br /><br /><br /><br />
+
+<form method="post">
+  {% csrf_token %}
+  {{ user_form.as_p }}
+  {{ collaborator_form.as_p }}
+  <button type="submit">Save changes</button>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'onboard/base.html' %}
+{% block content %}
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-md-8 col-md-offset-2">
+			{% for tool in tools %}
+			<div class="card">
+				<div class="row">
+					<div class="col-sm-2">
+						<img src="{{tool.icon_url}}" width="50px" height="50px"/>
+					</div>
+					<div class="col-sm-8">
+						<h3 class="txt-light">{{tool.name}}</h3>
+						{{tool.tagline}}
+
+					</div>
+					<div class="col-sm-2">
+						<a href="{{tool.link}}" target="_blank" class="btn btn-launch">Open {{tool.name}}</a>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+
+
+
+
+{% endblock %}
