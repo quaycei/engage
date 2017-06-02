@@ -31,4 +31,4 @@ def update_collaborator(request):
     })
 
 def collaborator_welcome(request):
-	return render(request, 'collaborators/welcome.html')
+	return render(request, 'collaborators/begin.html')
